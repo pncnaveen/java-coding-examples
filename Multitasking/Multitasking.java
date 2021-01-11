@@ -50,7 +50,10 @@ public class Multitasking {
 
     public static void main(String[] args) {
         Multitasking m1 = new Multitasking();
-        int tasks[] = { 1, 1, 2, 1, 2, 2, 2 };
+        int tasks[] = { 1, 1, 2, 1, 2, 1, 2 };
+        long startTime = System.nanoTime();
         System.out.println(m1.findTime(tasks, 2));
+        long endTime = System.nanoTime();
+        System.out.println("time:- " + (endTime - startTime));
     }
 }
