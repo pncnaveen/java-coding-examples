@@ -1,0 +1,11 @@
+Find nth fiboonaci number.
+example:- 
+I/P
+N=5
+O/P
+5
+
+I/P
+N=6
+O/P
+8
