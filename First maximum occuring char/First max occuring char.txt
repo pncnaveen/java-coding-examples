@@ -1,0 +1,5 @@
+Print first maximum occuring character.
+I/P:
+abbababa
+O/P:
+b,4
