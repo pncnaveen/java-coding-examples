@@ -11,7 +11,7 @@ public class RmvDuplifrmSrtdList {
         int front = 1;
         // parse through the list
         while (front < list.size()) {
-            // check if back equal to front
+            // check if back is greater than front, return false
             if (list.get(back) > list.get(front)) {
                 return false;
             } else {
