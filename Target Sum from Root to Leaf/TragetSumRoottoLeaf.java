@@ -40,26 +40,30 @@ public class TragetSumRoottoLeaf {
     }
 
     // find sum
-    public boolean targetsum(Node root, int sum, boolean isFound) {
+    public boolean targetsum(Node root, int sum) {
         if (root == null && sum == 0) {
-            isFound = true;
+            return true;
         } else if (root == null) {
-            isFound = false;
+            return false;
         }
-        isFound = targetsum(root.left, root.key - sum, isFound);
-        isFound = targetsum(root.right, root.key - sum, isFound);
-        return isFound;
+        if (!targetsum(root.left, sum - root.key) && !targetsum(root.right, sum - root.key)) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public boolean targetSum(int sum) {
-        return targetsum(root, sum, false);
+        return targetsum(root, sum);
     }
 
     public static void main(String[] args) {
         TragetSumRoottoLeaf tsl = new TragetSumRoottoLeaf();
-        tsl.ins(204);
-        tsl.ins(54);
-        tsl.ins(554);
-        tsl.ins(87);
+        tsl.ins(10);
+        tsl.ins(5);
+        tsl.ins(17);
+        tsl.ins(1);
+        System.out.println(tsl.targetSum(27));
+
     }
 }
